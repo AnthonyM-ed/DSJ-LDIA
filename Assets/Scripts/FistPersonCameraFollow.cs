@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FistPersonCameraFollow : MonoBehaviour
 {
-    public float mouseSensitivity = 100f; // Sensibilidad del mouse
+    public float mouseSensitivity = 0f; // Sensibilidad del mouse
     public Transform playerBody; // Transform del personaje al que sigue la cámara
     public Vector3 offset; // Posición de la cámara en relación con el personaje
 
@@ -21,9 +21,9 @@ public class FistPersonCameraFollow : MonoBehaviour
         // Actualizar la posición de la cámara para que siga al personaje con el offset
         transform.position = playerBody.position + offset;
 
-        // Obtener la entrada del mouse
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        // Obtener la entrada del mouse sin suavizado
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity;
 
         // Ajustar la rotación en el eje X para la vista vertical (mirar arriba y abajo)
         xRotation -= mouseY;

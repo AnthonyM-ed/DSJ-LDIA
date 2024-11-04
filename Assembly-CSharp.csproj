@@ -61,9 +61,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\FistPersonCameraFollow.cs" />
+    <Compile Include="Assets\Scripts\WanderingMovement.cs" />
+    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\ThirdPersonCameraFollow.cs" />
     <Compile Include="Assets\Scripts\CameraSwitch.cs" />
-    <Compile Include="Assets\Scripts\RandomMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
   </ItemGroup>
   <ItemGroup>
